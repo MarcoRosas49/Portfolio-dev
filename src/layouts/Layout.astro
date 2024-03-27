@@ -4,16 +4,17 @@ import Header from "../components/Header.astro";
 
 interface Props {
   title: string;
+  description: string
 }
 
-const { title } = Astro.props;
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -34,14 +35,33 @@ const { title } = Astro.props;
   }
   html {
     font-family: system-ui, "Onest Variable", sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
-    background: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1, #DDDDDD);
-  background-size: 800% 800%;
-  animation: gradient 15s ease infinite;
+    background: linear-gradient(135deg, rgba(0,1,3,0.9500175070028011) 0%, rgba(3,37,38,1) 80%, rgba(5,44,45,1) 95%);
+    background-size: 600% 600%;
+    animation: gradient 15s ease infinite;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
   }
+
+  @media (prefers-reduced-motion: reduce){
+    html{
+      scroll-behavior: auto;
+    }
+  }
+
+  @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
 </style>
