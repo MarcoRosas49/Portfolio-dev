@@ -8,19 +8,21 @@ import SocialPill from "../components/SocialPill.astro"
 import EmailIcon from "../components/icons/Email.astro";
 import Experience from "../components/Experience.astro";
 import SectionZip from "../components/SectionZip.astro"
-import Briefcase from "../components/icons/Briefcase.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import FolderIcon from "../components/icons/Folder.astro"
+import FileLikeIcon from "../components/icons/FileLike.astro";
 ---
 
 <Layout title="Portfolio de Marco Rosas - Estudiante de la carrera de ingeniería de software"
         description="Contactame por mi correo o la pagina de LinkedIn">
-  <main>
+  <main class="px-4">
     <SectionZip id="top" class="py-32 pb-16">
       <img
         class="rounded-full size-12 mb-5"
         src="../../images/foto.jpg"
         alt="my photo"
       />
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+      <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
         Hey, soy marco
         <a
           href="https://www.linkedin.com/in/marcorosas1008"
@@ -32,7 +34,7 @@ import Briefcase from "../components/icons/Briefcase.astro";
         </a>
       </h1>
     
-      <h2 class="text-2xl text-wrap">
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
         <span>Actualmente estudiando.</span>
         <span class="text-yellow-200/90"
           >Desarrollador web con conocimientos en javascript y React.</span
@@ -43,17 +45,17 @@ import Briefcase from "../components/icons/Briefcase.astro";
           personas</span>
       </h2>
 
-      <nav class="flex gap-x-4 mt-6">
+      <nav class="flex gap-4 mt-6 flex-wrap">
           <SocialPill href="https://www.linkedin.com/in/marcorosas1008">
-            <LinkedinIcon class="size-6" />
+            <LinkedinIcon class="size-3 md:size-6" />
             LinkedIn
           </SocialPill>
           <SocialPill href="https://github.com/MarcoRosas49">
-            <GithubIcon class="size-6" />
+            <GithubIcon class="size-3 md:size-6" />
             Github
           </SocialPill>
-          <SocialPill href="https://www.gmail.com/">
-            <EmailIcon class="size-6" />
+          <SocialPill href="mailto:marcorosas1008@gmail.com">
+            <EmailIcon class="size-3 md:size-6" />
             marcorosas1008@gmail.com
           </SocialPill>
       </nav>
@@ -61,8 +63,16 @@ import Briefcase from "../components/icons/Briefcase.astro";
 
     <SectionZip id="experiencia">
       <h2 class="text-2xl font-semibold mb-7 flex gap-x-3 items-center">
-        <Briefcase class="size-7"/>
-        Experiencia laboral
+        <BriefcaseIcon class="size-7"/>
+        Experiencia
+      </h2>
+      <Experience />
+    </SectionZip>
+
+    <SectionZip id="proyectos">
+      <h2 class="text-2xl font-semibold mb-7 flex gap-x-3 items-center">
+        <FolderIcon class="size-7"/>
+        Proyectos
       </h2>
       <Experience />
     </SectionZip>

@@ -3,31 +3,31 @@ import ExperienceItem from "./ExperienceItem.astro"
 
 const EXPERIENCE = [
     {
-        date: 'Released on January 13th, 2022',
-        title: 'Flowbite Application UI v2.0.0',
-        description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages',
+        date: 'Marzo 2024',
+        title: 'CRUD Videogame',
+        description: 'Proyecto del consumo de una API de videojuegos en el que se usa tecnologías como React, Node.js, Express y un ORM de sequelize',
         link: '#',
     },
     {
-        date: 'Released on December 7th, 2021',
-        title: 'Flowbite Figma v1.3.0',
-        description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban',
+        date: 'Febrero 2024',
+        title: 'Proyecto CivilityCare',
+        description: 'Proyecto desarrollado en la universidad para ver los casos de COVID en el Perú',
         link: '#',
     },
     {
-        date: 'Released on December 2nd, 2021',
-        title: 'Flowbite Library v1.2.2',
-        description: 'Get access to over 20+ pages including a dashboard layout, charts, kanban',
+        date: 'Enero 2024',
+        title: 'Juego Tarzan',
+        description: 'Proyecto del segundo ciclo de la universidad desarrollado para el curso de programación 2 en el cual se logra realizar el uso de sprints para poder tener un juego más fluido',
         link: '#',
     }
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700">
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4 mt-4">
 
     {
         EXPERIENCE.map( exp => (
-        <li class="mb-10 ms-4">
+        <li class="mb-10 ms-5">
             <ExperienceItem { ...exp} />
         </li>
         ))
