@@ -1,7 +1,14 @@
 ---
-import ReactIcon from "../components/icons/React.astro"
-import TailwindIcon from "../components/icons/Tailwind.astro"
-import AstroIcon from "../components/icons/AstroIcon.astro"
+import ReactIcon from "./icons/Languages/React.astro"
+import TailwindIcon from "./icons/Languages/Tailwind.astro"
+import AstroIcon from "./icons/Languages/AstroIcon.astro"
+import CIcon from "./icons/Languages/C++.astro"
+import HTML5Icon from "./icons/Languages/HTML5.astro"
+import CSSIcon from "./icons/Languages/CSS.astro"
+import NodeIcon from "./icons/Languages/Node.astro"
+import ExpressIcon from "./icons/Languages/Express.astro"
+import JavascriptIcon from "./icons/Languages/Javascript.astro"
+import ORMIcon from "./icons/Languages/ORM.astro"
 
 const TAGS = {
     REACT: {
@@ -11,32 +18,78 @@ const TAGS = {
     },
     TAILWIND: {
         name: "Tailwind",
-        class: "bg-white text-[#73bcf6]",
+        class: "bg-black text-[#73bcf6]",
         icon: TailwindIcon
     },
     ASTRO: {
         name: "Astro",
         class: "bg-black text-white",
         icon: AstroIcon
-    }
+    },
+    C: {
+      name: "C++",
+      class: "bg-black text-white",
+      icon: CIcon
+    },
+    HTML: {
+      name: "HTML5",
+      class: "bg-black text-white",
+      icon: HTML5Icon
+    },
+    CSS: {
+      name: "CSS3",
+      class: "bg-black text-white",
+      icon: CSSIcon
+    },
+    NODE: {
+      name: "Nodejs",
+      class: "bg-black text-white",
+      icon: NodeIcon
+    },
+    JAVASCRIPT: {
+      name: "Javascript",
+      class: "bg-black text-white",
+      icon: JavascriptIcon
+    },
+    EXPRESS: {
+      name: "Expressjs",
+      class: "bg-black text-white",
+      icon: ExpressIcon
+    },
+    ORM: {
+      name: "ORM de sequelize",
+      class: "bg-black text-white",
+      icon: ORMIcon
+    },
 }
 
 const PROJECTS = [
   {
-    title: "Proyecto 1",
-    description: "Lorem ipsum",
-    link: "#",
-    github: "#",
+    title: "Portafolio",
+    description: "Creación de pagina con Astro, Tailwing y HTML5 para agregar toda información a un portafolio",
+    link: "https://github.com/MarcoRosas49/portfolio-dev",
+    github: "https://github.com/MarcoRosas49/portfolio-dev",
+    image: "../../images/imgPortafolio.png",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.HTML],
+  },
+  {
+    title: "Videogames Project",
+    description: "Creación de pagina con react, nodejs, express para el consumo de una API de videojuegos y mediante un ORM guardar la información en una base de datos Postgres",
+    link: "https://github.com/MarcoRosas49/PI_VideoGame",
+    github: "https://github.com/MarcoRosas49/PI_VideoGame",
     image: "",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.ASTRO],
+    tags: [TAGS.REACT, TAGS.NODE, TAGS.EXPRESS, TAGS.HTML, TAGS.CSS],
   },
 ];
+
 ---
+
+
 
 {
   PROJECTS.map(({ title, description, tags, image }) => (
     <article>
-      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-3 mt-11">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
       <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
